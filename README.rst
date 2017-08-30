@@ -10,7 +10,9 @@ ReverseGear can be installed with pip: ``pip3 install reversegear``.
 Rationale
 ---------
 
-A variety of techniques exist for reverse engineering components by analyzing vehicle logs. ReverseGear aims to provide tools for automating these techniques. It is only intended for working offline, using logs of network traffic. For an online tool, see `caringcaraboo<https://github.com/CaringCaribou/caringcaribou>`_. 
+A variety of techniques exist for reverse engineering components by analyzing vehicle logs. ReverseGear aims to provide tools for automating these techniques. It is only intended for working offline, using logs of network traffic. For an online tool, see caringcaraboo_
+
+.. _caringcaraboo https://github.com/CaringCaribou/caringcaribou
 
 Inputs
 ------
