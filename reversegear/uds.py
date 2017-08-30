@@ -1,4 +1,3 @@
-import pprint
 import string
 from pyvit.hw.logplayer import LogPlayer
 from pyvit.dispatch import Dispatcher
@@ -54,17 +53,18 @@ class UDSDecoder:
                 for k in r.keys():
                     print('%s: ' % k, end='')
                     print(self.format_data(r[k]))
-                    print('')
+                print('')
 
             elif isinstance(r, GenericResponse):
                 print('[<-] Response [%s / 0x%X]' % (r.name, r.SID))
                 for k in r.keys():
                     print('%s: ' % k, end='')
                     print(self.format_data(r[k]))
-                    print('')
+                print('')
 
             elif isinstance(r, NegativeResponseException):
                 print('\n[!!] %s' % r)
+
             elif r is None:
                 print('Unknown Service')
 
@@ -85,9 +85,9 @@ class UDSDecoder:
                 # if this is the last line, pad it
                 if int(addr / 8) == int(len(data) / line_len):
                     for _ in range(0, line_len - (len(data) % line_len)):
-                        result += '-- '
+                        result += '   '
 
-                result += '\t'
+                result += '\t\t'
 
                 # add line of data as ascii
                 for b in data[addr:addr+line_len]:
